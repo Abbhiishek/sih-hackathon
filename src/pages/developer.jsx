@@ -1,18 +1,14 @@
-import React from 'react'
-import NavBar from '../Components/navbar'
-
-
-function Developer() {
-
+export default function App() {
     return(
-
-
         <div>
-            <NavBar/>
-            <h1>Hello this is Developers Page. </h1>
-        </div>
+            this is developer sections
+            </div>
     )
 
-}
 
-export default Developer
+
+
+
+
+
+}
