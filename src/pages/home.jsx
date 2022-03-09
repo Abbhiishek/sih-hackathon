@@ -1,11 +1,10 @@
 import React from 'react'
 import NavBar from '../Components/navbar'
-import LandingPage from '../Components/footer'
-import AboutPage from '../Components/footer'
-import Resources from '../Components/footer'
-import TeamPage from '../Components/footer'
-import FeaturesPage from '../Components/footer'
-import NewsLetterPage from '../Components/footer'
+import AboutPage from '../Components/about'
+import Resources from '../Components/resources'
+import TeamPage from '../Components/developer'
+import FeaturesPage from '../Components/features'
+import NewsLetterPage from '../Components/newsletter'
 import Footer from '../Components/footer'
 export default function App() {
 
@@ -13,7 +12,6 @@ export default function App() {
     return(
         <div>
         <NavBar/>
-        <LandingPage/>
         <AboutPage/>
         <Resources/>
         <TeamPage/>
