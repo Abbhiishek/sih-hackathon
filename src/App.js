@@ -1,37 +1,27 @@
-import './App.css';
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
-const Login = lazy(() => import('./pages/login'))
-const Landing = lazy(() => import('./pages/landing'))
-const Home = lazy(() => import('./pages/home'));
-const Dashboard = lazy(() => import('./pages/profile'));
-const Media = lazy(() => import('./pages/media'));
-const Scholorship = lazy(() => import('./pages/scholorship'));
-const Developers = lazy(() => import('./pages/developer'));
-
+import { Login } from './Components';
+import Home from './pages/home';
+import Dashboard from './pages/dashboard';
 
 const App = () => {
+  const navigate = useNavigate();
 
-	return (
-		<Router>
-			<Suspense fallback={<div>
-				<h1>loding.........</h1>
+  useEffect(() => {
+    const User = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
 
+    if (!User) navigate('/login');
+  }, [Home,Dashboard]);
 
-			</div>}>
-			<Routes>
-			    <Route path="/" exact element={<Landing/>} />
-				<Route path="/login"  element={<Login/>} />
-				<Route path="/home"  element={<Home/>} />
-				<Route path="/dashboard"  element={<Dashboard/>} />
-				<Route path="/sociome" element={<Media/>} />
-				<Route path="/scholorship"  element={<Scholorship/>} />
-				<Route path="/developers"  element={<Developers/>} />
-			</Routes>
-			</Suspense>
-		</Router>
-	)
-}
+  return (
+    <Routes>
+      <Route path="login" element={<Login />} />
+      <Route path="/*" element={<Home />} />
+      <Route path="/dashboard/:userId" element={<Dashboard />} />
+      
+    </Routes>
+  );
+};
 
-export default App
+export default App;
