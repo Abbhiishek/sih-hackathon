@@ -9,11 +9,12 @@ const App = () => {
 		const navigate = useNavigate();
 		const responseGoogle = (response) => {
 		  localStorage.setItem('user', JSON.stringify(response.profileObj));
-		  const { name, googleId, imageUrl } = response.profileObj;
+		  const { name, googleId, imageUrl  , email} = response.profileObj;
 		  const doc = {
 			_id: googleId,
 			_type: 'user',
 			userName: name,
+			userEmail: email,
 			image: imageUrl,
 		  };
 		  client.createIfNotExists(doc).then(() => {
