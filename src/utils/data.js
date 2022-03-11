@@ -73,6 +73,19 @@ export const categories = [
         },
       } `;
   
+  export const DeveloperQuery = `*[_type == "developer"] | order(_createdAt asc) {
+    image{
+      asset->{
+        url
+      }
+    },
+        _id,
+        name,
+        about,
+        social,
+        experience
+      } `;
+  
   export const postDetailQuery = (postid) => {
     const query = `*[_type == "pin" && _id == '${postid}']{
       image{

@@ -10,6 +10,10 @@
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     }
     
+    .code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
+    
     .container {
         text-align: center;
     }
@@ -279,6 +283,23 @@
         border: 1px solid rgba( 255, 255, 255, 0.18);
         color: #000000;
         padding-left: 25px;
+    }
+    
+    .developer-card {
+        text-align: center;
+        background: rgba( 255, 255, 255, 0.25);
+        background: rgba( 184, 233, 134, 0.15);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 16px);
+        -webkit-backdrop-filter: blur( 16px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    
+    .developer--photo {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
     }
     
     .footer {

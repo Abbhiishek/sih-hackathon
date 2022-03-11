@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import DeveloperLayout from '../../Components/Layout/developer'
+
+import {DeveloperQuery} from '../../utils/data'
+import {client} from '../../client'
 
 export default function App() {
+    const[developer , setDeveloper]= useState();
+
+    useEffect(() => {
+        const query =DeveloperQuery;
+        client.fetch(query).then((data)=>
+        setDeveloper(data));
+    })
 
     return(
         <div id='developer'>
-            <div className="container">
+            <div className="container  py-5 px-4">
                 <h1>Our Team</h1>
                 <div className="row">
-                    <div className="col-lg-4">Abhishek Kushwaha</div>    
-                    <div className="col-lg-4">Amndeep Singh</div>    
-                    <div className="col-lg-4">Anshita Choubey</div>    
-                    <div className="col-lg-4">Anjali Gupta</div>    
-                    <div className="col-lg-4">Sayantan Dey</div>    
-                    <div className="col-lg-4">Prem Kumar Ranjan</div>    
+                    {developer && (
+                        developer?.map((item) =>
+                        <DeveloperLayout key={item._id} developer={item} />
+                        
+                    ))}
+                        
                 </div>    
             </div>
         </div>
