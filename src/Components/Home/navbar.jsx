@@ -1,15 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState,  useEffect } from 'react';
 
 import aicte_logo_nav from '../../Images/aicte_logo_nav.png'
 import { Link , Route, Routes } from 'react-router-dom';
 import Dashboard from '../../pages/dashboard'
+import UserProfile from '../../pages/userprofile'
 import { userQuery } from '../../utils/data';
 import { client } from '../../client';
 
 
 function NavBar() {
     const [user, setUser] = useState();
-    const scrollRef = useRef(null);
+    
 
     const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
     
@@ -23,9 +24,7 @@ function NavBar() {
     }, []);
 
 
-    useEffect(() => {
-        scrollRef.current.scrollTo(0, 0);
-      });
+    
 
     return(
         <div className="sticky-top">
@@ -59,18 +58,23 @@ function NavBar() {
                         <a className="nav-link "  href="#developer" >Developer</a>
                     </li>
                     <li className="nav-item">
-                        
-                        <Link to={`Dashboard/${user?._id}`}>
-                                <img src={user?.image} alt="user-pic" className="rounded img-thumbnail"  width="50px"/>
-                        </Link>
-    
+                    <Link to={`dashboard/${user?._id}`}>
+                            <button  className="btn btn-outline-warning">Dashboard</button>
+                    </Link>
                     </li>
-                        <div className="pb-2 flex-1 h-screen overflow-y-scroll" ref={scrollRef}>
+                    <li className="nav-item">
+                        
+                        <Link to={`userprofile/${user?._id}`}>
+                            <img src={user?.image} alt="user-pic" className="rounded img-thumbnail"  width="50px"/>
+                        </Link>
+                    </li>
+                        
                             <Routes>
-                                <Route exact path="/Dashboard:userId" component={<Dashboard/>} />
+                                <Route  path="/dashboard:userId" component={<Dashboard/>} />
+                                <Route  path="/userprofile:userId" component={<UserProfile/>} />
                                 
                             </Routes>
-                        </div>
+                        
                     
                 </ul>
             </div>
