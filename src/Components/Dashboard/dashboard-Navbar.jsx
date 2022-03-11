@@ -33,8 +33,8 @@ function NavBar() {
             <nav className="navbar sticky-top navbar-expand-lg navbar-light shadow-5-strong nav-background">
         <div className="container-fluid">
             
-            <a className="navbar-brand" href="#main" >
-            <Link to={`Home`}>
+            <a className="navbar-brand" href="#home" onClick={Home} >
+            <Link to={`home`}>
               <img src={aicte_logo_nav} alt="" width="380" height="73" class="d-inline-block align-text-top"/>
             </Link>
             </a>
