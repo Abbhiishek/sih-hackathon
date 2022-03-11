@@ -26,12 +26,12 @@ const App = () => {
 				<div className="container py-5 h-100">
 					<div className="row d-flex justify-content-center align-items-center h-100">
 					<div className="col-12 col-md-8 col-lg-6 col-xl-5">
-						<div className="card bg-dark text-white" styleName="border-radius: 1rem;">
+						<div className="card  text-white login-card" styleName="border-radius: 1rem;">
 						<div className="card-body p-5 text-center">
 
 							<div className="mb-md-3 mt-md-4 pb-2">
 
-							<h2 className="fw-bold mb-2 text-uppercase">Login</h2>
+							<h2 className="fw-bold mb-2 text-uppercase ">Login</h2>
 
 							<div className="d-flex justify-content-center text-center mt-4 pt-1">
 							<GoogleLogin
