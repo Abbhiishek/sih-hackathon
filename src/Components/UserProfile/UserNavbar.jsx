@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 import aicte_logo_nav from '../../Images/aicte_logo_nav.png'
 import {  Route, Routes , useNavigate } from 'react-router-dom';
 import UserProfile from '../../pages/userprofile'
+import CreatePost from '../../pages/CreatePost'
 import { userQuery } from '../../utils/data';
-import { client } from '../../client';
+import { client , } from '../../client';
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -37,7 +37,7 @@ function NavBar() {
         if (hr >= 0 && hr < 12) {
             setGreet("Good Morning! ");
         } else if (hr ===12) {
-            setGreet("Good Noon!");
+            setGreet("Good Noon! ");
         } else if (hr >= 12 && hr <= 17) {
             setGreet("Good Afternoon! ");
         } else {
@@ -66,16 +66,16 @@ function NavBar() {
       </button>
             <div className="collapse navbar-collapse" id="navbarContent">
                 <ul className="navbar-nav mb-2 mb-lg-0 ms-auto gap-3">
-                    <li className="nav-item">
+                    <li className="nav-item" >
                         <p className="nav-link"><b>{greet}{user?.userName}</b></p>
-                    </li>
-                    <li className="nav-item">
-                
-                    <a href="#dashboard" className="btn btn-outline-warning">Dashboard</a>
-                        
                     </li>
                     <li className="nav-item" onClick={() => navigate('/Create_post')}>
                         <FontAwesomeIcon  className="btn btn-outline-dark mt-1" height="100%" alt="create a POST" icon={faCirclePlus} /> 
+                    </li>
+                    <li className="nav-item">
+                
+                    <a href="#dashboard" onClick={() => navigate(`/dashboard/${user?._id}`)} className="btn btn-outline-warning">Dashboard</a>
+                        
                     </li>
                     <li className="nav-item">
                         
@@ -87,6 +87,8 @@ function NavBar() {
                         <div className="pb-2 flex-1 h-screen overflow-y-scroll" ref={scrollRef}>
                             <Routes>
                                 <Route  path="/userprofile:userId" component={<UserProfile/>} />
+                                <Route  path="/createpost" component={<CreatePost user={user && user}/>} />
+                                
                             </Routes>
                         </div>
                     
