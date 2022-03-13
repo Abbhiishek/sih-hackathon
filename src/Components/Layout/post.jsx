@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 const Post= ( {post} ) =>{
     const navigate = useNavigate();
 
-    const { postedBy, image, _id , like} = post;
+    const { postedBy, image, _id , like , comments} = post;
 
     const user = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
 
@@ -52,31 +52,60 @@ const Post= ( {post} ) =>{
 
     return(
  < >
-        <div onClick={() => navigate(`/post-detail/${_id}`)} >
 
-        {post?.title}
-         
-        
-        {image && (
-        <img className="rounded-lg" src={(urlFor(image).width(250).url())} alt="user-post" /> )}
+        <div className="col-lg-12 mt-2 mb-2">
 
-        {post?.about}
+          <div className="post--card p-2">
 
+            <div className="post--user-name--delete">
+            <nav className="navbar p-2">
+              <div className="container-fluid  navbar-light bg-light rounded-2">
+                  <Link to={`/userprofile/${postedBy?._id}`} className="text-decoration-none">
+                  <a className="navbar-brand" href="#">
+                    <img src={postedBy?.image} alt="" width="45" height="45" 
+                    className="d-inline-block align-text-top rounded-circle justify-content-center"/>
+                      <span className="ms-auto mx-2 mt-3"> {postedBy?.userName} </span> 
+                  </a>
+                </Link>
+                <a href="#">
+                {postedBy?._id === user?.googleId && (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    DeletePost(_id);
+                  }}
+                  className="btn btn-outline-danger"
+                ><AiTwotoneDelete/>
+                </button>
+                )
+              }
+                </a>
+              </div>
+            </nav>
 
-      <Link to={`/user-profile/${postedBy?._id}`} className="">
-        <img
-          className="w-8 h-8 rounded-full object-cover"
-          src={postedBy?.image}
-          alt="user-profile"
-        />
-        <p className="font-semibold capitalize">{postedBy?.userName}</p>
-      </Link>
-        </div>
-        
-        
+            </div>
 
+            <div className="container parent">
+              <div className="post--photo">
+                {image && (
+                <img className="rounded-lg" src={(urlFor(image).width(250).url())} alt="user-post" /> )}
+              </div>
+              <div className="post--content">
+                  <h5 className="code text-start">
+                    {post?.title}
+                  </h5>
 
-        {alreadyLiked?.length !== 0 ?(
+                  <p className="text-start">
+                    {post?.about}
+                  </p>
+              </div>
+            </div>
+            <div className="down--nav--bar p-2 mt-1">
+
+            <nav class="navbar navbar-light bg-light rounded-2">
+                <form class="container-fluid justify-content-spacebetween">
+                {alreadyLiked?.length !== 0 ?(
                 <button type="button" className="btn btn-outline-dark">
                   {like?.length} 💓
                 </button>
@@ -92,20 +121,23 @@ const Post= ( {post} ) =>{
                   {like?.length}{savingPost ? '...' : ' 🤍 '}
                 </button>
               )}
+                <button className="btn btn-sm btn-outline-secondary" type="button">
+                {comments?.length} Comments
+                
+                </button>
+                <button 
+                className="btn btn-sm btn-outline-warning" 
+                type="button"
+                onClick={() => navigate(`/post-detail/${_id}`)} >
+                View Details
+                
+                </button>
+                </form>
+            </nav>
+            </div>
 
-          {postedBy?._id === user?.googleId && (
-           <button
-             type="button"
-             onClick={(e) => {
-               e.stopPropagation();
-               DeletePost(_id);
-             }}
-             className="btn btn-outline-danger"
-           ><AiTwotoneDelete/>
-           </button>
-           )
-        }
-        
+          </div>
+        </div>
         </>
 
 
