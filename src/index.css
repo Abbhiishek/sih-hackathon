@@ -3,7 +3,27 @@
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-color: #ffffff43;
+        background-color: #ffffff00;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 20px;
+        background-color: transparent;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background-color: #f700ff;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background-color: #00d5ff;
     }
     
     code {
@@ -213,14 +233,20 @@
         padding-top: 25px;
     }
     
+    .developer-bg-aqua {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('./Images/wave\ \(6\).svg');
+    }
+    
     #testimonials {
         padding: 50px 0;
-        background-color: rgb(151, 189, 247);
+        background-color: rgba(56, 134, 252, 0.918);
         text-align: center;
         color: black;
     }
     
-    .carousel-item-testimonial {
+    .testimonial--layout {
         padding: 7% 15%;
     }
     
@@ -228,6 +254,85 @@
         width: 10%;
         border-radius: 100%;
         margin: 20px;
+    }
+    
+    .testimonial--layout--back {
+        background: rgba( 251, 21, 0, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 20px);
+        -webkit-backdrop-filter: blur( 20px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    
+    .page-container {
+        padding-top: 2rem;
+        /* background-image: url('./backgroundImage.jpg'); */
+        height: 100vh;
+        justify-items: center;
+    }
+    
+    .page-heading {
+        display: flex;
+        justify-content: center;
+        color: white;
+        text-transform: uppercase;
+        padding-bottom: 5rem;
+    }
+    
+    .page-content {
+        text-align: center;
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+    }
+    
+    .img-text {
+        background-color: black;
+        color: white;
+        border-radius: 0.9375rem;
+    }
+    
+    .img-area {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+    
+    .bottom-text {
+        padding-bottom: 0.625rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        letter-spacing: 0.0625rem;
+        font-family: sans-serif;
+        font-size: 0.80rem;
+    }
+    
+    .logo {
+        border-radius: 50%;
+        border: 0.125rem solid white;
+        height: 5rem;
+        width: 5rem;
+    }
+    
+    .heading {
+        text-transform: uppercase;
+        letter-spacing: 0.125rem;
+        font-size: 1.875rem;
+    }
+    
+    .card-container {
+        justify-content: center;
+    }
+    
+    .carousel-content-container {
+        justify-content: space-evenly;
+    }
+    
+    .quotes {
+        justify-content: flex-end;
+        display: flex;
+        font-size: 40px;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
     }
     /* Dasboard */
     
@@ -301,11 +406,86 @@
         width: 250px;
         height: 250px;
     }
+    /* user profile  */
+    
+    .main {
+        text-align: center;
+    }
+    
+    .profile-page-about {
+        margin: 0 50px;
+        background: rgba( 253, 147, 147, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 1px);
+        -webkit-backdrop-filter: blur( 1px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    
+    .background-picture {
+        margin: 10px 10px 0 10px;
+        padding: 0px;
+        /* width: 1200px;
+        height: 200px; */
+        border-radius: 5px;
+    }
+    
+    .profile--logout--btn {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
+    
+    .profilepic {
+        width: 13rem;
+        border-radius: 50%;
+        border: solid white 5px;
+    }
+    
+    .profile {
+        font-family: cursive;
+        font-size: 35px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 15%; */
+        margin-top: -70px;
+    }
+    
+    .username {
+        font-weight: bolder;
+    }
+    /* user profile ends here  */
+    /* create post stylesheet */
+    
+    .upload--photo--section {
+        height: 500px;
+    }
+    
+    .delete--btn--createpost {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+    }
+    
+    .form--data--create--post {
+        background: rgba( 0, 255, 181, 0.2);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 7px);
+        -webkit-backdrop-filter: blur( 7px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    
+    .footer-details {
+        font-size: 20px;
+        font-weight: lighter;
+        font-family: "Popins";
+    }
     
     .footer {
         text-align: center;
         line-height: 1.5;
-        font-family: 'Poppins';
         font-size: small;
         background-color: #000000;
         /* height:150px; */
@@ -313,10 +493,4 @@
         /* margin-bottom: 25px; */
         padding-bottom: 10px;
         padding-top: 10px;
-    }
-    
-    .footer-details {
-        font-size: 20px;
-        font-weight: lighter;
-        font-family: "Popins";
     }
