@@ -97,7 +97,7 @@
         userName,
         image
       },
-      save[]{
+      like[]{
         _key,
         postedBy->{
           _id,
