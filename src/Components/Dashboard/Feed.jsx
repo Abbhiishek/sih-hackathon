@@ -1,13 +1,22 @@
-import React, {useRef, useEffect } from 'react';
+import React, {useRef, useEffect ,useState } from 'react';
 import Home from '../../pages/home'
 import { Link , Route, Routes } from 'react-router-dom';
-import { userQuery } from '../../utils/data';
+import { feedQuery } from '../../utils/data';
 import { client } from '../../client';
-
+import { PostLayout } from "./../Layout";
 
 
 export default function App() {
     const scrollRef = useRef(null);
+    const [Posts, setPosts] = useState();
+
+    useEffect( () => {
+        const query= feedQuery;
+        client.fetch(query).then(
+            (data)=>{
+            setPosts(data)
+        })
+    })
 
 
     useEffect(() => {
@@ -17,81 +26,44 @@ export default function App() {
     
     return(
         <div className="feedcontainer">
-            <div className="parent">
-                <div className="div1 ">
-                    <div className="resources-feed-about">
-                        
-                        <p>We offer our user with a separate <b>Resources Panel</b></p>
-                        <div className="row">
-                            <div className="col">
-                            <ul>
-                            <li>E-BOOKS</li>
-                            <li>Tutorials</li>
-                            <li>Much More ...</li>
-                        </ul>
-                            </div>    
-                            <div className="col">
-                            <Link to={`Resources`}>
-                            <button href="#" className="btn btn-outline-success mt-2">Resources</button>
-                        </Link>
-                            </div>    
-                        </div>
-                        
+            <div className=" container dashboard--section">
+                <div className=" dashboard--options container">
+                    <div className="row mb-5">
+
+                    <div className=" col-lg-3 col-md-6">
+                        <Link to={`Resources`}>
+                            <button href="#" className="btn btn-outline-success">Resources</button>
+                        </Link>   
+                    </div>
+                    <div className="col-lg-3 col-md-6">
                            
-                            
-                    </div>
-                    <div className="scholorship-feed-about">
-                        <p>We offer our user with a separate <b>Resources Panel</b></p>
-                        <div className="row">
-                            <div className="col">
-                                <ul>
-                                    <li>E-BOOKS</li>
-                                    <li>Tutorials</li>
-                                    <li>Much More ...</li>
-                                </ul>
-                            </div>    
-                            <div className="col">    
                                 <Link to={`Scholorship`}>
-                                    <button href="#" className="btn btn-outline-success mt-2">Go To Scholorship</button>
+                                    <button href="#" className="btn btn-outline-success">Go To Scholorship</button>
                                 </Link>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div className="events-feed-about">
-                        <p>We offer our user with a separate <b>Resources Panel</b></p>
-                        <div className="row">
                             
-                            <div className="col">
-                                <ul>
-                                    <li>E-BOOKS</li>
-                                    <li>Tutorials</li>
-                                    <li>Much More ...</li>
-                                </ul>
-                            </div>    
-                            <div className="col">
+                    </div>
+                    <div className=" col-lg-3 col-md-6">
+                            
                                 <Link to={`Events`}>
                                     <button href="#" className="btn btn-outline-success">Go To Events</button>
                                 </Link>
-                            </div>                       
-                        </div>
+                                                  
                     </div>
-                    <div className="review-feed-about">
-                        <p>Rate Our Project<b>!</b></p>
-                        <div className="row">
-                            
-                            <div className="col">
-                                <p>Feel Free to express your thoughts on our project.</p>
-                            </div>    
-                            <div className="col">
-                                <Link to={`Events`}>
-                                    <button href="#" className="btn btn-outline-success">Rate Us !</button>
-                                </Link>
-                            </div>                       
-                        </div>
+                    <div className=" col-lg-3 col-md-6">
+                            <Link to={`Events`}>
+                                    <button href="#" className="btn btn-outline-success">Rate Us</button>
+                            </Link>
+                    </div>
                     </div>
                 </div>
-                <div className="div2"> 
+
+                <div className="All-post-section pt-5 pb-5"> 
+                <div className="row">
+
+                {Posts?.map((post) => <PostLayout key={post._id} post={post}/>)}
+
+                </div>
+
 
 
                 </div>
