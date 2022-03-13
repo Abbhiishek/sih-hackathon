@@ -1,7 +1,7 @@
 import React, { useState,  useEffect } from 'react';
 
 import aicte_logo_nav from '../../Images/aicte_logo_nav.png'
-import { Link , Route, Routes } from 'react-router-dom';
+import { Link , Route, Routes , useNavigate } from 'react-router-dom';
 import Dashboard from '../../pages/dashboard'
 import UserProfile from '../../pages/userprofile'
 import { userQuery } from '../../utils/data';
@@ -10,6 +10,7 @@ import { client } from '../../client';
 
 function NavBar() {
     const [user, setUser] = useState();
+    const navigate = useNavigate();
     
 
     const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
@@ -21,7 +22,7 @@ function NavBar() {
         client.fetch(query).then((data) => {
         setUser(data[0]);
         });
-    }, []);
+    }, [userInfo]);
 
 
     
@@ -31,7 +32,7 @@ function NavBar() {
             <nav className="navbar sticky-top navbar-expand-lg navbar-light  shadow-5-strong nav-background">
         <div className="container-fluid">
             <a className="navbar-brand" href="#home" >
-            <img src={aicte_logo_nav} alt="" width="380" height="73" class="d-inline-block align-text-top"/>
+            <img src={aicte_logo_nav} alt="" width="380" height="73" className="d-inline-block align-text-top"/>
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
         <span className="navbar-toggler-icon"></span>
@@ -63,10 +64,14 @@ function NavBar() {
                     </Link>
                     </li>
                     <li className="nav-item">
-                        
-                        <Link to={`userprofile/${user?._id}`}>
+                        {  (user && (<Link to={`userprofile/${user?._id}`}>
                             <img src={user?.image} alt="user-pic" className="rounded img-thumbnail"  width="50px"/>
-                        </Link>
+                        </Link>)) ||
+                          
+                            <button onClick={()=>navigate('/login')}  className="btn btn-outline-success">Login</button>
+                          
+
+                        }
                     </li>
                         
                             <Routes>
