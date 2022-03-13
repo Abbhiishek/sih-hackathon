@@ -5,7 +5,7 @@ export { default as About } from './about';
 export { default as Footer }from './footer';
 export { default as Developer }from './developer';
 export { default as Overview }from './features';
-export { default as Newsletter }from './developer';
-export { default as AiChatBot }from './developer';
-export { default as Testimonial }from './developer';
+export { default as Newsletter }from './newsletter';
+export { default as AiChatBot }from './aichatbot';
+export { default as Testimonial }from './Testimonial';
 
