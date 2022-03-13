@@ -5,18 +5,19 @@ import {DeveloperQuery} from '../../utils/data'
 import {client} from '../../client'
 
 export default function App() {
-    const[developer , setDeveloper]= useState();
+    const[developer , setdeveloper]= useState();
 
     useEffect(() => {
         const query =DeveloperQuery;
         client.fetch(query).then((data)=>
-        setDeveloper(data));
+        setdeveloper(data));
     })
 
     return(
         <div id='developer'>
+            <div className="developer-bg-aqua">
             <div className="container  py-5 px-4">
-                <h1>Our Team</h1>
+                <h1 className="mb-5 code"><b>Our Team</b></h1>
                 <div className="row">
                     {developer && (
                         developer?.map((item) =>
@@ -25,6 +26,7 @@ export default function App() {
                     ))}
                         
                 </div>    
+                </div>
             </div>
         </div>
     )
