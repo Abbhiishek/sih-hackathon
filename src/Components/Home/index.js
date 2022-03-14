@@ -8,4 +8,6 @@ export { default as Overview }from './features';
 export { default as Newsletter }from './newsletter';
 export { default as AiChatBot }from './aichatbot';
 export { default as Testimonial }from './Testimonial';
+export { default as GiveReview }from './givereview';
+export { default as Techstack }from './techstack';
 

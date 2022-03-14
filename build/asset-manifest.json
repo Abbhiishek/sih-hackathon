@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8d1accc0.css",
+    "main.js": "/static/js/main.590fe479.js",
+    "static/media/Romantic Mashup.mp4": "/static/media/Romantic Mashup.51c189bd108c1826aae5.mp4",
+    "static/media/carousel1.jpg": "/static/media/carousel1.a26f179d8901276229f1.jpg",
+    "static/media/carousel2.jpg": "/static/media/carousel2.ddbb6c5674f149c834bb.jpg",
+    "static/media/scholorship.jpg": "/static/media/scholorship.4afd9e2842d43d7c3899.jpg",
+    "static/media/social-media.png": "/static/media/social-media.a248a50f35ff587f25f4.png",
+    "static/media/carousel3.jpg": "/static/media/carousel3.c82a3d1054525183c1c7.jpg",
+    "static/media/events.jpg": "/static/media/events.e605f5cec33245201b0d.jpg",
+    "static/media/Chatbot.png": "/static/media/Chatbot.29ea3ceff2b26527f28a.png",
+    "static/media/aicte_logo_nav.png": "/static/media/aicte_logo_nav.e353b549ceabd4f46eee.png",
+    "static/media/endless-constellation.svg": "/static/media/endless-constellation.9f696962a9412b3c7e3f.svg",
+    "index.html": "/index.html",
+    "static/media/wave (6).svg": "/static/media/wave (6).aa27d3d5927cb9b884a7.svg",
+    "static/media/bg-aqua-top-wave.svg": "/static/media/bg-aqua-top-wave.895d8a4b43f30cc7395b.svg",
+    "static/media/bg-orange.svg": "/static/media/bg-orange.b81162adc66b6e3110ac.svg",
+    "static/media/bg-blue.svg": "/static/media/bg-blue.e9b7b90851886e8caa90.svg",
+    "main.8d1accc0.css.map": "/static/css/main.8d1accc0.css.map",
+    "main.590fe479.js.map": "/static/js/main.590fe479.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d1accc0.css",
+    "static/js/main.590fe479.js"
+  ]
+}

@@ -416,6 +416,22 @@
         text-align: center;
     }
     
+    .give--review--section {
+        background-image: url(./Images/bg-aqua-top-wave.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .givereview {
+        background: rgba( 255, 255, 255, 0.25);
+        background: rgba( 184, 233, 134, 0.15);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 16px);
+        -webkit-backdrop-filter: blur( 16px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    
     .profile-page-about {
         margin: 0 50px;
         background: rgba( 253, 147, 147, 0.25);
@@ -481,20 +497,99 @@
         border: 1px solid rgba( 255, 255, 255, 0.18);
     }
     
-    .footer-details {
-        font-size: 20px;
-        font-weight: lighter;
-        font-family: "Popins";
+    .footer--section {
+        padding-top: 60px;
     }
     
-    .footer {
+    footer {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-color: #3586ff;
         text-align: center;
-        line-height: 1.5;
-        font-size: small;
-        background-color: #000000;
-        /* height:150px; */
-        color: antiquewhite;
-        /* margin-bottom: 25px; */
-        padding-bottom: 10px;
-        padding-top: 10px;
+        align-content: center;
+    }
+    
+    .footer-items {
+        list-style-type: none;
+        color: #fff;
+        font-family: 'poppins', sans-serif;
+    }
+    
+    .smart--india--hacathon--footer-item {
+        font-size: 25px;
+        opacity: 1;
+    }
+    
+    .jis--University--footer-item {
+        font-size: 20px;
+        opacity: 0.85;
+    }
+    
+    .cfc--footer-item {
+        font-size: 25px;
+        opacity: 0.9;
+        font-size: 21px;
+    }
+    
+    footer .wave {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+    }
+    
+    footer .wave#wave1 {
+        background: url(./Images/wave.png);
+        background-size: 1000px 100px;
+        z-index: 1000;
+        opacity: 1;
+        bottom: 10px;
+        animation: animatewave1 3s linear infinite;
+    }
+    
+    footer .wave#wave2 {
+        background: url(./Images/wave.png);
+        background-size: 1000px 100px;
+        z-index: 999;
+        opacity: 0.4;
+        bottom: 10px;
+        animation: animatewave2 3s linear infinite;
+    }
+    
+    footer .wave#wave3 {
+        background: url(./Images/wave.png);
+        background-size: 1000px 100px;
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animatewave1 2s linear infinite;
+    }
+    
+    footer .wave#wave4 {
+        background: url(./Images/wave.png);
+        background-size: 1000px 100px;
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animatewave2 2s linear infinite;
+    }
+    
+    @keyframes animatewave1 {
+        0% {
+            background-position-x: 1000px;
+        }
+        100% {
+            background-position-x: 0px;
+        }
+    }
+    
+    @keyframes animatewave2 {
+        0% {
+            background-position-x: 0px;
+        }
+        100% {
+            background-position-x: 1000px;
+        }
     }
