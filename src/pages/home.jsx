@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavBar,About , Footer , Landingpage , Developer , Newsletter , Testimonial , AiChatBot , Overview} from '../Components/Home'
+import {NavBar,About , Footer ,GiveReview,Techstack, Landingpage , Developer , Newsletter , Testimonial , AiChatBot , Overview} from '../Components/Home'
 
 
 
@@ -14,6 +14,8 @@ export default function App() {
         <Developer/>
         <Newsletter/>
         <Testimonial/>
+        <Techstack/>
+        <GiveReview/>
         <AiChatBot/>
         <Footer/>
         </div>
