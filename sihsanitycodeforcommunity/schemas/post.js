@@ -9,6 +9,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'about',
+        title: 'About',
+        type: 'string',
+      },
+      {
         name: 'image',
         title: 'Image',
         type: 'image',
@@ -30,13 +35,13 @@ export default {
         name: 'like',
         title: 'Like',
         type: 'array',
-        of: [{ type: 'save' }],
+        of: [{ type: 'like' }],
       },
       {
         name: 'comments',
         title: 'Comments',
         type: 'array',
-        of: [{ type: 'comment' }],
+        of: [{ type: 'comments' }],
       },
     ],
   };

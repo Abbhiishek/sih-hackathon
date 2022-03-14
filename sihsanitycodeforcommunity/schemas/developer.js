@@ -22,6 +22,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'experience',
+        title: 'Experience',
+        type: 'string',
+      },
+      {
         name: 'social',
         title: 'Social',
         type: 'string',

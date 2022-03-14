@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { Navbar , Feed } from '../Components/Dashboard'
 
-const App = (user) => {
+const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,21 +15,9 @@ const App = (user) => {
   return (
       <div>
           <Navbar/>
-          {/* <UserProfile/> */}
           <Feed/>
-
-
-
-
-
-
-
-
-
-          
       </div>
     
   );
 };
-
 export default App;

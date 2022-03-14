@@ -1,6 +1,6 @@
 export default {
-    name: 'save',
-    title: 'Save',
+    name: 'like',
+    title: 'Like',
     type: 'document',
     fields: [
       {
