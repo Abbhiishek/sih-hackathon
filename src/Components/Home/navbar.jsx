@@ -37,7 +37,7 @@ function NavBar() {
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
         <span className="navbar-toggler-icon"></span>
       </button>
-            <div className="collapse navbar-collapse" id="navbarContent">
+            <div className=" navbar-collapse collapse " id="navbarContent">
                 <ul className="navbar-nav mb-2 mb-lg-0 ms-auto gap-4">
                     <li className="nav-item">
                         <a className="nav-link " aria-current="page"  href="#landingpage" >Home</a>
@@ -83,6 +83,7 @@ function NavBar() {
                     
                 </ul>
             </div>
+            
         </div>
     </nav>
         </div>
