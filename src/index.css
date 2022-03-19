@@ -635,3 +635,106 @@
             background-position-x: 1000px;
         }
     }
+    /* /// .scholorship-feed page  */
+    
+    .circle1 {
+        background: white;
+        background: linear-gradient( to right bottom, rgb(236, 199, 224), rgba(231, 71, 165, 0.8), rgba(48, 4, 247, 0.3));
+        opacity: 1;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .circle2 {
+        background: white;
+        background: linear-gradient( to right bottom, rgb(174, 216, 221), rgba(235, 138, 238, 0.8), rgba(119, 4, 134, 0.3));
+        opacity: 1;
+        height: 180px;
+        width: 180px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .circle3 {
+        background: white;
+        background: linear-gradient( to right bottom, rgb(174, 216, 221), rgba(235, 138, 238, 0.8), rgba(119, 4, 134, 0.3));
+        opacity: 1;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .circle4 {
+        background: white;
+        background: linear-gradient( to right bottom, rgb(174, 216, 221), rgba(235, 138, 238, 0.8), rgba(119, 4, 134, 0.3));
+        opacity: 0.75;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .circle1 {
+        top: 1.5%;
+        right: 1.5%;
+    }
+    
+    .circle2 {
+        bottom: 10%;
+        right: 75%;
+    }
+    
+    .circle3 {
+        bottom: 55%;
+        right: 55%;
+    }
+    
+    .circle4 {
+        bottom: 60%;
+        right: 15%;
+    }
+    
+    .scholorship {
+        background: white;
+        padding: 12px;
+        min-height: 20vh;
+        opacity: 0.65;
+        background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.295), rgba(255, 255, 255, 0.116));
+        border-radius: 2rem;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .Scholarship--page {
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(-45deg, rgba(101, 5, 114, 0.3), #40b2df, #9f40df);
+        background-clip: content-box;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.8;
+    }
+    
+    .landing--scholorship {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    
+    .about-info-Scholorship {
+        font-weight: bolder;
+        color: #000000;
+        font-size: 20px;
+    }
