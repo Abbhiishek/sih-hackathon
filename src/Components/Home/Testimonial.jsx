@@ -15,7 +15,7 @@ export default function App(){
 
         client.fetch(query).then((data)=>
         setdreviews(data));
-    })
+    },[])
 
     return (
         <>
