@@ -209,18 +209,17 @@
         padding: 5% 5%;
         margin: 10px;
     }
-    
-    .overView--Scholorship,
+    /* .overView--Scholorship,
     .overView--Socials,
     .overView--Events,
     .overView--Aichat {
-        /* background: rgba( 255, 255, 255, 0);
+        background: rgba( 255, 255, 255, 0);
         box-shadow: 11px 21.5px 54.9px -18px rgba(0, 0, 0, 0.153), 37.1px 72.4px 41.2px -18px rgba(0, 0, 0, 0.148), 166px 324px 172px -18px rgba(0, 0, 0, 0.12);
         backdrop-filter: blur( 0px);
         -webkit-backdrop-filter: blur( 0px);
         border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18); */
-    }
+        border: 1px solid rgba( 255, 255, 255, 0.18); 
+    } */
     
     .OverView-card-about {
         font-weight: bold;
