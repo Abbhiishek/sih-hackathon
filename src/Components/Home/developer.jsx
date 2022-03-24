@@ -11,7 +11,7 @@ export default function App() {
         const query =DeveloperQuery;
         client.fetch(query).then((data)=>
         setdeveloper(data));
-    })
+    },[])
 
     return(
         <div id='developer'>
