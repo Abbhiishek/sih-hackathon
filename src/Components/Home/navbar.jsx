@@ -20,9 +20,9 @@ function NavBar() {
         const query = userQuery(userInfo?.googleId);
 
         client.fetch(query).then((data) => {
-        setUser(data[0]);
+            setUser(data[0]);
         });
-    }, [userInfo]);
+    }, [userInfo?.googleId]);
 
 
     
