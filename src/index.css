@@ -737,3 +737,27 @@
         color: #000000;
         font-size: 20px;
     }
+    
+    .techstack {
+        background: linear-gradient(to bottom, rgb(72, 144, 252), rgb(51, 212, 186));
+    }
+    
+    .techstackitem {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+        margin: 5px;
+        /* padding: 10px; */
+        font-family: 'poppins', sans-serif;
+        border-radius: 5px;
+    }
+    
+    .techstackitem:hover {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        transition: all ease-in-out 0.2s;
+    }
+    
+    .newsletter-section {
+        background: linear-gradient(to bottom, rgb(51, 212, 186), rgb(72, 144, 252));
+    }
