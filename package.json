@@ -1,6 +1,6 @@
 {
-    "name": "sih-hackathon",
-    "version": "0.1.0",
+    "name": "Aicteo",
+    "version": "1.1.0",
     "private": true,
     "dependencies": {
         "@fortawesome/free-solid-svg-icons": "^6.0.0",

@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className="wave" id="wave4"></div>
                 </div>
                 <ul className="footer-items">
-                    <li className="smart--india--hacathon--footer-item"> Smart India Hackathon </li>
+                   
                     <li  className= "jis--University--footer-item"> @2022 | JIS University </li>
                     <li className="cfc--footer-item"> Code For Community | all rights reserved </li>
                 </ul>

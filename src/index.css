@@ -6,24 +6,28 @@
         background-color: #ffffff00;
     }
     
-     ::-webkit-scrollbar {
-        width: 20px;
-        background-color: transparent;
+    body.dark {
+        --fontclr: #fafafa;
+        --bgclr: #000000;
     }
     
-     ::-webkit-scrollbar-thumb {
-        background-color: #f700ff;
-        border-radius: 20px;
-        border: 6px solid transparent;
-        background-clip: content-box;
+     ::-webkit-scrollbar {
+        width: 20px;
     }
     
      ::-webkit-scrollbar-track {
         background-color: transparent;
     }
     
+     ::-webkit-scrollbar-thumb {
+        background-color: rgb(255, 0, 0);
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+    }
+    
      ::-webkit-scrollbar-thumb:hover {
-        background-color: #00d5ff;
+        background-color: rgb(0, 217, 255);
     }
     
     code {
@@ -205,18 +209,17 @@
         padding: 5% 5%;
         margin: 10px;
     }
-    
-    .overView--Scholorship,
+    /* .overView--Scholorship,
     .overView--Socials,
     .overView--Events,
     .overView--Aichat {
-        /* background: rgba( 255, 255, 255, 0);
+        background: rgba( 255, 255, 255, 0);
         box-shadow: 11px 21.5px 54.9px -18px rgba(0, 0, 0, 0.153), 37.1px 72.4px 41.2px -18px rgba(0, 0, 0, 0.148), 166px 324px 172px -18px rgba(0, 0, 0, 0.12);
         backdrop-filter: blur( 0px);
         -webkit-backdrop-filter: blur( 0px);
         border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18); */
-    }
+        border: 1px solid rgba( 255, 255, 255, 0.18); 
+    } */
     
     .OverView-card-about {
         font-weight: bold;
@@ -497,6 +500,44 @@
         border: 1px solid rgba( 255, 255, 255, 0.18);
     }
     
+    #Aichatbtn {
+        display: block;
+        position: fixed;
+        bottom: 30px;
+        right: 80px;
+        z-index: 10000;
+        border: none;
+        outline: none;
+        background-color: rgb(42, 42, 255);
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        line-height: normal;
+        width: 100px;
+        height: 50px;
+        border-radius: 25px;
+        font-size: 16px;
+        padding-top: 15px;
+        text-decoration: wavy;
+    }
+    
+    #scrollup {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        z-index: 1000000;
+        border: none;
+        outline: none;
+        background-color: rgb(234, 0, 255);
+        color: white;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 18px;
+    }
+    
     .footer--section {
         padding-top: 60px;
     }
@@ -592,4 +633,131 @@
         100% {
             background-position-x: 1000px;
         }
+    }
+    /* /// .scholorship-feed page  */
+    
+    .circle1 {
+        background: white;
+        background: linear-gradient( to right bottom, rgb(236, 199, 224), rgba(231, 71, 165, 0.8), rgba(48, 4, 247, 0.3));
+        opacity: 1;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .circle2 {
+        background: white;
+        background: linear-gradient( to right bottom, rgb(174, 216, 221), rgba(235, 138, 238, 0.8), rgba(119, 4, 134, 0.3));
+        opacity: 1;
+        height: 180px;
+        width: 180px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .circle3 {
+        background: white;
+        background: linear-gradient( to right bottom, rgb(174, 216, 221), rgba(235, 138, 238, 0.8), rgba(119, 4, 134, 0.3));
+        opacity: 1;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .circle4 {
+        background: white;
+        background: linear-gradient( to right bottom, rgb(174, 216, 221), rgba(235, 138, 238, 0.8), rgba(119, 4, 134, 0.3));
+        opacity: 0.75;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .circle1 {
+        top: 1.5%;
+        right: 1.5%;
+    }
+    
+    .circle2 {
+        bottom: 10%;
+        right: 75%;
+    }
+    
+    .circle3 {
+        bottom: 55%;
+        right: 55%;
+    }
+    
+    .circle4 {
+        bottom: 60%;
+        right: 15%;
+    }
+    
+    .scholorship {
+        background: white;
+        padding: 12px;
+        min-height: 20vh;
+        opacity: 0.65;
+        background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.295), rgba(255, 255, 255, 0.116));
+        border-radius: 2rem;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .Scholarship--page {
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(-45deg, rgba(101, 5, 114, 0.3), #40b2df, #9f40df);
+        background-clip: content-box;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.8;
+    }
+    
+    .landing--scholorship {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    
+    .about-info-Scholorship {
+        font-weight: bolder;
+        color: #000000;
+        font-size: 20px;
+    }
+    
+    .techstack {
+        background: linear-gradient(to bottom, rgb(72, 144, 252), rgb(51, 212, 186));
+    }
+    
+    .techstackitem {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+        margin: 5px;
+        /* padding: 10px; */
+        font-family: 'poppins', sans-serif;
+        border-radius: 5px;
+    }
+    
+    .techstackitem:hover {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        transition: all ease-in-out 0.2s;
+    }
+    
+    .newsletter-section {
+        background: linear-gradient(to bottom, rgb(51, 212, 186), rgb(72, 144, 252));
     }
