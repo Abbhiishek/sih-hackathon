@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutVideo from'../../Videos/Romantic Mashup.mp4'
+import AboutVideo from'../../Videos/overview video finished.mp4'
 
 export default function App() {
 
