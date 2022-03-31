@@ -14,7 +14,7 @@ export default function App() {
         <Developer/>
         <Newsletter/>
         <Testimonial/>
-        <Techstack/>
+        {/* <Techstack/> */}
         <GiveReview/>
         <AiChatBot/>
         <Footer/>
