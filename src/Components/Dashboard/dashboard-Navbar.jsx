@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 import aicte_logo_nav from '../../Images/aicte_logo_nav.png'
 import {  Route, Routes , useNavigate } from 'react-router-dom';
 import UserProfile from '../../pages/userprofile'
@@ -68,6 +68,13 @@ function NavBar() {
                 <ul className="navbar-nav mb-2 mb-lg-0 ms-auto gap-3">
                     <li className="nav-item">
                         <p className="nav-link"><b>{greet}{user?.userName}</b></p>
+                    </li>
+                    <li className="nav-item">
+                
+                    <Link to={`/scholorship`}>
+                        <button className="btn btn-outline-success text-decoration-none"  >Scholorship</button>
+                    </Link>
+                        
                     </li>
                     <li className="nav-item">
                 
