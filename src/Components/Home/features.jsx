@@ -9,11 +9,11 @@ export default function App(){
 
 
     return(
-        <div className="container">
+        <div className="container pb-4">
             
             <div id="feature">
             <h1>OverView <span className="celebration--icon">😁</span></h1>
-            <p>Thses are the bunch of Features we have come up with. <br /> 
+            <p>These are the bunch of Features we have come up with. <br /> 
             We have tried our best knowledge to solve some of the problems Statements
             </p>
             <div id="scholorship" className="row overView--Scholorship overview--card mb-4">
@@ -61,7 +61,7 @@ export default function App(){
                     </p>
                 </div>
             </div> */}
-            <div className="row overView--Aichat  overview--card mb-4">
+            {/* <div className="row overView--Aichat  overview--card mb-4">
                 <div className="col-lg-6 ">
                     
                     
@@ -82,7 +82,7 @@ export default function App(){
                           
                        </div> 
                 </div>
-            </div>
+            </div> */}
             
             
             
