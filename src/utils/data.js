@@ -23,7 +23,43 @@
           },
         },
       } `;
+  export const ScholorshipQuery = `*[_type == "scholarship"] | order(_createdAt desc) {
+      image{
+        asset->{
+          url
+        }
+      },
+        _id,
+        name,
+        about,
+        eligibility,
+        amount,
+        state,
+        country,
+        link
+      } `;
   
+
+      export const ScholorshipSearchQuery = (SearchName) => {
+        const query = `*[_type == "scholarship" && name match '${SearchName}*']{
+          image{
+            asset->{
+              url
+            }
+          },
+            _id,
+            name,
+            about,
+            eligibility,
+            amount,
+            state,
+            country,
+            link
+                }`;
+        return query;
+      };
+
+
   export const DeveloperQuery = `*[_type == "developer"] | order(_createdAt asc) {
     image{
       asset->{

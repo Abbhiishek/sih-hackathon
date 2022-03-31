@@ -1,19 +1,20 @@
+
 export default function App(){
 
 
-    let mybutton;
 
-   window.addEventListener("load", () => {
+  let mybutton;
+
+  window.addEventListener("load", () => {
   
 
-  //Get the button
-  mybutton = document.getElementById("scrollup");
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.addEventListener("scroll", scrollFunction);
+    //Get the button
+    mybutton = document.getElementById("scrollup");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.addEventListener("scroll", scrollFunction);
 
 
-});
-
+  });
 
 
 function scrollFunction() {
@@ -29,15 +30,18 @@ function topFunction() {
 }
 
     return (
-       <>
+       <>       
             <button onClick={topFunction} id="scrollup" title="Go to top" className="hvr-float">
             <svg xmlns='http://www.w3.org/2000/svg' className='ionicon' viewBox='0 0 512 512'>
             <title>Go To Top</title>
             <path fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='35' d='M112 328l144-144 144 144' />
             </svg>
         </button>
-        <a className="hvr-float" href="#Contact" rel="noopener" aria-label="Contact" id="Aichatbtn"><strong>Let's
-            Talk!</strong></a>
+
+        <div class="chatbox__button">
+                <a class="hvr-float" href="#footer" rel="noopener" aria-label="Contact" id="Aichatbtn"><strong>Let's
+                Talk!</strong></a>
+            </div>
        </>
        
        )

@@ -1,66 +1,60 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+// import { useParams } from 'react-router-dom';
+
+
 
 import Scholarship from './../Components/Layout/scholorship'
+import { ScholorshipQuery , ScholorshipSearchQuery } from '../utils/data';
+import { client } from '../client';
+import { Navbar  } from '../Components/Dashboard'
+// import Spinner from '../Components/Spinner';
 
 
 export default function App( ){
-    const [country, setCountry]= useState([]);
-    const [countryid, setCountryid]= useState('');
-    const [stetes, setSat]= useState([]);
 
-    var headers = new Headers();
-    headers.append("X-CSCAPI-KEY", "API_KEY");
+    const [Scholarship_data, setScholarship] = useState();
+    const [SearchName, setSearchName] = useState();
+    const [SearchAmount, setSearchAmount] = useState();
+    // const [Scholarship_data, setScholarship] = useState();
+    // const [loading, setLoading] = useState(false);
+    
 
-    var requestOptions = {
-    method: 'GET',
-    headers: headers,
-    redirect: 'follow'
-    };
 
     
 
-    useEffect( ()=>{
-        const getcountry= async ()=>{
-            const req = fetch("https://api.countrystatecity.in/v1/countries", requestOptions);
-          const getres= await req.json();
-          console.log(getres);
-          setCountry(await getres);
-     
+    useEffect(() => {
+        if (SearchName !== '') {
+        //   setLoading(true);
+          const query = ScholorshipSearchQuery(SearchName.toLowerCase());
+          client.fetch(query).then((data) => {
+            setScholarship(data);
+            // setLoading(false);
+          });
+        } else {
+            // setLoading(true);
+    
+            client.fetch(ScholorshipQuery).then((data) => {
+            setScholarship(data);
+            // setLoading(false);
+          });
         }
-        getcountry();
-     
-     
-       },[]);
-     
-       const handlecountry=(event)=>{
-         const getcoutryid= event.target.value;
-         setCountryid(getcoutryid);
-         event.preventDefault();
-       }
-     
-       useEffect( ()=>{
-     
-         const getstate= async ()=>{
-           const resstate= await fetch(` https://api.countrystatecity.in/v1/countries/${countryid}/states`);
-           const getst= resstate.json();
-           setSat(await getst);
-     
-         }
-         getstate();
-     
-       },[countryid]);
+      }, [SearchName ]);
+
+
+
+    //   const ideaName = SearchName || 'Scholarship';
+      
 
     
-
     return(
         <>
+        <Navbar />
         <div className="Scholarship--page">
 
             <div className="circle1"></div>
             <div className="circle2"></div>
             <div className="circle3"></div>
             <div className="circle4"></div>
-
 
             <div className="hello container">
 
@@ -80,48 +74,39 @@ export default function App( ){
             
 
         </div>
-        <div className="Scholarship--page">
-            <div className="container pt-5">
-            <form class="row gx-3 gy-2 align-items-center">
-            <div class="col-sm-3">
-                <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-                <select class="form-select" id="specificSizeSelect">
-                <option selected>Select Country</option>
-                {
-                    country.map( (getcon)=>(
-                        <option key={getcon.id} value={getcon.iso2 }> { getcon.name}</option>
-                          ))
-                }
-                </select>
-            </div>
-            <div class="col-sm-3">
-                <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-                <select class="form-select" id="specificSizeSelect">
-                <option selected>Select State</option>
-                {
-                     stetes.map( (st,index)=>(                    
-                   <option key={index}>{ st.name}</option>
-                     ))
-                     }
-                </select>
-            </div>
-            <div class="col-sm-3">
-                <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-                <select class="form-select" id="specificSizeSelect">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                </select>
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-            </form>
+        <div className="scholarship--grid--layout">
+
+            <div className="scholarship--form p-5">
+                <label className="code">Name of the Scholarship</label>
+                <br />
+                <input type="text"
+                className="form-control" 
+                onChange={(e) => setSearchName(e.target.value)}
+                placeholder="Search Scholarship"
+                value={SearchName}
+                />
+                <br/>
+                {/* <label for="customRange1" class="form-label">Amount Range</label>
+                <br />
+                <input type="range"
+                className="form-range" 
+                onChange={(e) => setSearchAmount(e.target.value)}
+                placeholder="Amount Scholarship"
+                value={SearchAmount} 
+                /> */}
+
             </div>
 
-        <Scholarship/>
+            <div className="scholarship--response">
+              {/* {loading && <Spinner message={`We are adding ${ideaName}  to your feed!`} />} */}
+
+              {Scholarship_data?.map((Scholarship_data) => <Scholarship key={Scholarship_data._id} scholorship={Scholarship_data}/>)}
+            </div>
+
+
+
         </div>
+            
 </>
     )
 }

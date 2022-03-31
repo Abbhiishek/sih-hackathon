@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.5da99dc5.css",
-    "main.js": "/static/js/main.02a37e02.js",
-    "static/media/Romantic Mashup.mp4": "/static/media/Romantic Mashup.51c189bd108c1826aae5.mp4",
+    "main.css": "/static/css/main.a0c7d521.css",
+    "main.js": "/static/js/main.b494464f.js",
+    "static/media/overview video finished.mp4": "/static/media/overview video finished.413905ba9e2fd71708fb.mp4",
+    "static/media/AI-CHAT.gif": "/static/media/AI-CHAT.78ef8b42f7147d23c981.gif",
+    "static/media/Scholorship-gif .gif": "/static/media/Scholorship-gif .7bf9cefcaa2ab2bfb3c0.gif",
+    "static/media/scholarship-.png": "/static/media/scholarship-.a7caefedcc8d160f6027.png",
+    "static/media/social-media-art.png": "/static/media/social-media-art.b8d800c372ff47e76e2b.png",
     "static/media/carousel1.jpg": "/static/media/carousel1.a26f179d8901276229f1.jpg",
     "static/media/carousel2.jpg": "/static/media/carousel2.ddbb6c5674f149c834bb.jpg",
-    "static/media/scholorship.jpg": "/static/media/scholorship.4afd9e2842d43d7c3899.jpg",
     "static/media/social-media.png": "/static/media/social-media.a248a50f35ff587f25f4.png",
     "static/media/carousel3.jpg": "/static/media/carousel3.c82a3d1054525183c1c7.jpg",
-    "static/media/events.jpg": "/static/media/events.e605f5cec33245201b0d.jpg",
     "static/media/Chatbot.png": "/static/media/Chatbot.29ea3ceff2b26527f28a.png",
     "static/media/aicte_logo_nav.png": "/static/media/aicte_logo_nav.e353b549ceabd4f46eee.png",
     "static/media/endless-constellation.svg": "/static/media/endless-constellation.9f696962a9412b3c7e3f.svg",
@@ -17,11 +19,11 @@
     "static/media/bg-aqua-top-wave.svg": "/static/media/bg-aqua-top-wave.895d8a4b43f30cc7395b.svg",
     "static/media/bg-orange.svg": "/static/media/bg-orange.b81162adc66b6e3110ac.svg",
     "static/media/bg-blue.svg": "/static/media/bg-blue.e9b7b90851886e8caa90.svg",
-    "main.5da99dc5.css.map": "/static/css/main.5da99dc5.css.map",
-    "main.02a37e02.js.map": "/static/js/main.02a37e02.js.map"
+    "main.a0c7d521.css.map": "/static/css/main.a0c7d521.css.map",
+    "main.b494464f.js.map": "/static/js/main.b494464f.js.map"
   },
   "entrypoints": [
-    "static/css/main.5da99dc5.css",
-    "static/js/main.02a37e02.js"
+    "static/css/main.a0c7d521.css",
+    "static/js/main.b494464f.js"
   ]
 }

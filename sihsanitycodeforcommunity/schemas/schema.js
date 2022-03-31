@@ -10,6 +10,7 @@ import like from './like'
 import postedBy from './postedBy'
 import developer from "./developer";
 import testimonial from "./testimonials";
+import scholarship from "./scholarship";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -19,6 +20,6 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     user,post,like,postedBy,
-    comments , developer,testimonial
+    comments , developer,testimonial,scholarship
   ]),
 })
