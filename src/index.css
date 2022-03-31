@@ -1,3 +1,11 @@
+    html {
+        --primaryGradient: linear-gradient(93.12deg, #51afe6 0.52%, #a12ae6 100%);
+        --secondaryGradient: linear-gradient(268.91deg, #cf1af3, #9C1DE7 99.69%);
+        --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+        --primary: #581B98;
+    }
+    
     body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -503,7 +511,7 @@
     #Aichatbtn {
         display: block;
         position: fixed;
-        bottom: 30px;
+        bottom: 15px;
         right: 80px;
         z-index: 10000;
         border: none;
@@ -524,7 +532,7 @@
     #scrollup {
         display: none;
         position: fixed;
-        bottom: 30px;
+        bottom: 15px;
         right: 20px;
         z-index: 1000000;
         border: none;
@@ -750,14 +758,261 @@
         /* padding: 10px; */
         font-family: 'poppins', sans-serif;
         border-radius: 5px;
+        height: 60px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
     
     .techstackitem:hover {
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(223, 223, 223, 0);
         color: black;
         transition: all ease-in-out 0.2s;
     }
     
     .newsletter-section {
         background: linear-gradient(to bottom, rgb(51, 212, 186), rgb(72, 144, 252));
+    }
+    
+    .icon-box {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        transition: ease-in-out 0.3s;
+        border-radius: 5px;
+    }
+    
+    .icon-box i {
+        font-size: 32px;
+        padding-right: 10px;
+        line-height: 1;
+    }
+    
+    .icon-box h3 {
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+        padding-left: 0.5rem;
+        line-height: 1;
+        font-size: 20px;
+        color: var(--fontclr);
+    }
+    /* CHATBOX
+=============== */
+    
+    .chatbot-box {
+        position: absolute;
+        bottom: 35px;
+        right: 25px;
+        position: fixed;
+        z-index: 9999;
+    }
+    
+    .chatbox {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        position: fixed;
+        z-index: -123456;
+    }
+    /* CONTENT IS CLOSE */
+    
+    .chatbox__support {
+        display: flex;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        height: 398px;
+        width: 291px;
+        z-index: -123456;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        /* position: fixed; */
+    }
+    /* CONTENT ISOPEN */
+    
+    .chatbox--active {
+        transform: translateY(-40px);
+        z-index: 123456;
+        opacity: 1;
+    }
+    /* BUTTON */
+    
+    .chatbox__button {
+        text-align: right;
+    }
+    
+    .send__button {
+        padding: 6px;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    /* HEADER */
+    
+    .chatbox__header {
+        /* position: sticky; */
+        top: 0;
+        background: orange;
+    }
+    /* MESSAGES */
+    
+    .chatbox__messages {
+        margin-top: auto;
+        display: flex;
+        overflow-y: scroll;
+        flex-direction: column-reverse;
+    }
+    
+    .messages__item {
+        background: orange;
+        max-width: 60.6%;
+        width: fit-content;
+    }
+    
+    .messages__item--operator {
+        margin-left: auto;
+    }
+    
+    .messages__item--visitor {
+        margin-right: auto;
+    }
+    /* FOOTER */
+    
+    .chatbox__footer {
+        /* position: sticky; */
+        bottom: 0;
+    }
+    
+    .chatbox__support {
+        background: #f9f9f9;
+        height: 450px;
+        width: 350px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    /* HEADER */
+    
+    .chatbox__header {
+        background: var(--primaryGradient);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: var(--primaryBoxShadow);
+    }
+    
+    .chatbox__image--header {
+        margin-right: 10px;
+    }
+    
+    .chatbox__heading--header {
+        font-size: 1.2rem;
+        color: white;
+    }
+    
+    .chatbox__description--header {
+        font-size: .9rem;
+        color: white;
+    }
+    /* Messages */
+    
+    .chatbox__messages {
+        padding: 0 20px;
+    }
+    
+    .messages__item {
+        margin-top: 10px;
+        background: #E0E0E0;
+        padding: 8px 12px;
+        max-width: 70%;
+    }
+    
+    .messages__item--visitor,
+    .messages__item--typing {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
+    .messages__item--operator {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background: var(--primary);
+        color: white;
+    }
+    /* FOOTER */
+    
+    .chatbox__footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px;
+        background: var(--secondaryGradient);
+        box-shadow: var(--secondaryBoxShadow);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-top: 20px;
+    }
+    
+    .chatbox__footer input {
+        width: 80%;
+        border: none;
+        padding: 10px 10px;
+        border-radius: 30px;
+        text-align: left;
+    }
+    
+    .chatbox__send--footer {
+        color: rgb(255, 255, 255);
+    }
+    
+    .chatbox__button button,
+    .chatbox__button button:focus,
+    .chatbox__button button:visited {
+        padding: 10px;
+        background: white;
+        border: none;
+        outline: none;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+    
+    .Scholarship--layout {
+        background: rgba( 0, 255, 248, 0.1);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 6px);
+        -webkit-backdrop-filter: blur( 6px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    
+    .scholorship--image {
+        padding-top: 50px;
+    }
+    
+    .scholarship--grid--layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 20px;
+        padding: 20px;
+    }
+    
+    .post--layout--glass {
+        background: rgba( 255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
     }
