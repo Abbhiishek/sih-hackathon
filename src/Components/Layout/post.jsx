@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 const Post= ( {post} ) =>{
     const navigate = useNavigate();
 
-    const { postedBy, image, _id , like , comments} = post;
+    const { postedBy, image, _id , like } = post;
 
     const user = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
 
@@ -53,13 +53,13 @@ const Post= ( {post} ) =>{
     return(
  < >
 
-        <div className="col-lg-12 mt-2 mb-2">
+        <div className="col-lg-12 mt-2 mb-2 post--layout--glass">
 
           <div className="post--card p-2">
 
             <div className="post--user-name--delete">
             <nav className="navbar p-2">
-              <div className="container-fluid  navbar-light bg-light rounded-2">
+              <div className="container-fluid  navbar-light  rounded-2">
                   <Link to={`/userprofile/${postedBy?._id}`} className="text-decoration-none">
                   <a className="navbar-brand" href="#">
                     <img src={postedBy?.image} alt="" width="45" height="45" 
@@ -103,7 +103,7 @@ const Post= ( {post} ) =>{
             </div>
             <div className="down--nav--bar p-2 mt-1">
 
-            <nav class="navbar navbar-light bg-light rounded-2">
+            <nav class="navbar navbar-light rounded-2">
                 <form class="container-fluid justify-content-spacebetween">
                 {alreadyLiked?.length !== 0 ?(
                 <button type="button" className="btn btn-outline-dark">
@@ -121,17 +121,7 @@ const Post= ( {post} ) =>{
                   {like?.length}{savingPost ? '...' : ' 🤍 '}
                 </button>
               )}
-                <button className="btn btn-sm btn-outline-secondary" type="button">
-                {comments?.length} Comments
                 
-                </button>
-                <button 
-                className="btn btn-sm btn-outline-warning" 
-                type="button"
-                onClick={() => navigate(`/post-detail/${_id}`)} >
-                View Details
-                
-                </button>
                 </form>
             </nav>
             </div>
