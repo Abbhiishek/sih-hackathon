@@ -48,11 +48,12 @@ function NavBar() {
                     <li className="nav-item">
                         <a className="nav-link "  href="#feature" >Feature</a>
                     </li>
+                    
                     <li className="nav-item">
-                        <a className="nav-link " href="#resources">Resources</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link "  href="#scholorship">Scholorship</a>
+                    <Link to={`scholorship`}>
+                        <button className="btn btn-outline-success text-decoration-none"  >Scholorship</button>
+                    </Link>
+                        
                     </li>
                     
                     <li className="nav-item">
