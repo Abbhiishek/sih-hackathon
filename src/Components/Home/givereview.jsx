@@ -28,7 +28,11 @@ export default function App(){
               setLoading(false); 
             }) 
             .catch((error) => { 
+
+              console.log('Upload failed:', error.message); 
+
                
+
             }); 
         } else { 
           setLoading(false); 
@@ -89,7 +93,10 @@ export default function App(){
                         placeholder="Enter Your Name" 
                         className="form-control  mb-3" 
                         required 
-                        maxlength="20" 
+
+                        maxLength="20" 
+ 
+
                     /> 
                 <input 
                     type="text" 
@@ -98,7 +105,8 @@ export default function App(){
                     placeholder="Your Position" 
                     className="form-control  mb-3" 
                     required 
-                    maxlength="200" 
+maxlength="200" 
+
                 /> 
  
                 <textarea  
@@ -109,8 +117,9 @@ export default function App(){
                 onChange={(e) => setGivereview(e.target.value)} 
                 placeholder="Tell us what you feel about this project !" 
                 required 
+
                 maxlength="200" 
-                /> 
+/> 
                 </form> 
                 <button 
                 type="button" 
