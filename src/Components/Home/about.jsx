@@ -18,21 +18,19 @@ export default function App() {
 
                     
                     <div className="col-lg-6">
-                        <p>we are representing  here to represent on the Behalf of 
+                        <p className="code">we are representing  here to represent on the Behalf of 
                             <br />
-                            <b><h3>Jis University </h3></b> <br /> 
-                            we have deal with the 4+ <em>Problem Satements</em> 
+                            <b><h2>Jis University </h2></b> 
+                            Problem Statement <br />
 
+                            <em> <b>  Portal to know about various National and International scholarships </b></em> 
 
                             <div className="problem-statements">
                                 
-                                <ul>
-                                    <li>Scholorship</li>
-                                    <li>Mass Email & SMS sending ...</li>
-                                    <li>Resources</li>
-                                    <li>Events</li>
-                                    <li>Social Media ...</li>
-                                </ul>    
+                                <p>
+                                
+                                Objective: : We need you to develop a portal where various National and International scholarships based on merit, study field, income etc. are shown up. This should be a real time data management which should be updated with the latest scholarships that are being offered.
+                                </p>    
                             </div>
                         </p>
                     </div>

@@ -17,7 +17,8 @@ export default function App(){
                         It's Free and relaible and we will never spam you.
 
                     </p>
-                    <form method="POST">
+                    <form
+                    onSubmit={(e) => alert("You are signed up ! 😁")}>
                         <div className="form-group">
                             <input 
                                 type="text" 
