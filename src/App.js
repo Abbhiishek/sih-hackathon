@@ -15,24 +15,22 @@ const App = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState();
   const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
-
-  useEffect(() => {
-    const query = userQuery(userInfo?.googleId);
-
-    
-
-    client.fetch(query).then((data) => {
-    setUser(data[0]);
-    });
-}, []);
-
-
-
+  
   useEffect(() => {
     const User = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
 
     if (!User) navigate('/');
   }, []);
+  
+  useEffect(() => {
+    const query = userQuery(userInfo?.googleId);
+    client.fetch(query).then((data) => {
+    setUser(data[0]);
+    });
+  }, []);
+
+
+
 
   return (
     
