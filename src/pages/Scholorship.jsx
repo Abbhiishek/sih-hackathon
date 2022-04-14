@@ -14,7 +14,7 @@ export default function App( ){
 
     const [Scholarship_data, setScholarship] = useState();
     const [SearchName, setSearchName] = useState();
-    const [SearchAmount, setSearchAmount] = useState();
+    // const [SearchAmount, setSearchAmount] = useState();
     // const [Scholarship_data, setScholarship] = useState();
     // const [loading, setLoading] = useState(false);
     
@@ -25,7 +25,7 @@ export default function App( ){
     useEffect(() => {
         if (SearchName !== '') {
         //   setLoading(true);
-          const query = ScholorshipSearchQuery(SearchName.toLowerCase());
+          const query = ScholorshipSearchQuery(SearchName);
           client.fetch(query).then((data) => {
             setScholarship(data);
             // setLoading(false);
@@ -38,7 +38,7 @@ export default function App( ){
             // setLoading(false);
           });
         }
-      }, [SearchName ]);
+      }, [SearchName]);
 
 
 

@@ -17,7 +17,7 @@ export default function App(){
                         It's Free and relaible and we will never spam you.
 
                     </p>
-                    <form>
+                    <form method="POST">
                         <div className="form-group">
                             <input 
                                 type="text" 
