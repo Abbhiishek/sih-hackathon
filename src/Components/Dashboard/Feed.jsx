@@ -13,7 +13,7 @@ export default function App() {
             (data)=>{
             setPosts(data)
         })
-    })
+    },[])
 
 
     
