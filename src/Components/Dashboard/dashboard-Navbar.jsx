@@ -28,7 +28,7 @@ function NavBar() {
         client.fetch(query).then((data) => {
         setUser(data[0]);
         });
-    }, [userInfo]);
+    }, []);
 
 
     useEffect(() => {
